@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<script type="text/JavaScript">
+			function validate()
+			{
+				var pat=/^\d{8}$/;
+				var patn=/^[A-Za-z]+$/;
+				if(pat.test(document.getElementById("sid").value)==false)
+				{
+					alert("Invalid student is");
+					return false;
+				}
+				if(patn.test(document.getElementById("sname").value)==false)
+				{
+					alert("invalid student name");
+					return false;
+				}
+				return true;
+			}
+		</script>
+	</head>
+	
+	<body>
+		<form onsubmit="return validate()" >
+			<table>
+				<tr>
+					<td>Enter Student Id:-</td><td><input type="text" value="" name="sid" id="sid" /></td>
+				</tr>
+				<tr>
+					<td>Enter Student Name:-</td><td><input type="text" value="" name="sname" id="sname" /></td>
+				</tr>
+				<tr>
+					<td><input type="submit" /></td><td><input type="reset" /></td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>
